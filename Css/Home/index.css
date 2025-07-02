@@ -1,0 +1,17 @@
+:root {
+  --cor-azul: #3B82F6;
+  --cor-laranja: #F56B00;
+  --cinza-claro: #F4F4F5;
+  --cinza-escuro: #1F2937;
+  --cinza-texto: #6B7280;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
