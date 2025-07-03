@@ -6,12 +6,46 @@
   --cinza-texto: #6B7280;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo img {
-  height: 60px;
+
+
+header{
+  width: 100%;
+  background-color: var(--cor-azul);
+  color: var(--cinza-escuro);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+nav img {
+  width: 9rem;
+}
+
+#search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  width: 30rem;
+}
+
+.btn-search {
+  background-color: var(--cor-laranja);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
 }
