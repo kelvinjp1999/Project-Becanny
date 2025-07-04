@@ -123,5 +123,5 @@ nav img {
 .botoes-header {
   display: flex;
   align-items: center;
-  gap: 28px; /* diminua esse valor para aproximar mais */
+  gap: 28px; 
 }
