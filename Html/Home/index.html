@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Css/Home/index.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../../js/index.js" defer></script>
 
     <title>Becanny</title>
 </head>
@@ -15,9 +19,14 @@
    <header>
         <nav>
             <img src="../../Assets/logo.png" alt="Logo Becanny" />
-            <div>
+            <div class="menu-mobile " id="menu-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="search-container">
                 <input type="text" placeholder="Pesquisar..." id="search-input"/>
-                <button class="btn-search">P</button>  
+                <button class="btn-search"><i class='bx  bx-search' ></i></button>  
             </div>
             <div class="botoes-header">
              <a href="#" class="profile-link"><i class='bx bx-user'></i><span>Perfil</span></a>  

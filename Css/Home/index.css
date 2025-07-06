@@ -6,24 +6,14 @@
   --cinza-texto: #6B7280;
 }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
 
-  #search-input {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
 
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 
@@ -56,8 +46,15 @@ nav img {
   width: 9rem;
 }
 
+.menu-mobile {
+  flex-direction: column;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
 #search-input {
-  padding: 8px;
+  padding: 12px;
   border: none;
   border-radius: 8px;
   width: 30rem;
@@ -67,10 +64,12 @@ nav img {
   background-color: var(--cor-laranja);
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 0.8rem 0.9rem;
   border-radius: 8px;
   cursor: pointer;
 }
+
+
 
 .profile-link, .cart-lin {
   display: flex;
@@ -90,7 +89,8 @@ nav img {
 
 .profile-link i {
   color: white;
-  font-size: 22px;
+  font-size: 1.5rem;
+  padding: 0.2rem;
 }
 
 .cart-link {
@@ -100,10 +100,10 @@ nav img {
   color: white;
   text-decoration: none;
   font-weight: bold;
-
+  font-size: 1.2rem;
   border: 2px solid orange;
   border-radius: 8px;
-  padding: 4px 10px;
+  padding: 0.2rem;
 }
 
 .cart-link i {
@@ -123,5 +123,60 @@ nav img {
 .botoes-header {
   display: flex;
   align-items: center;
-  gap: 28px; 
+  gap: 1rem; /* diminua esse valor para aproximar mais */
+}
+
+
+
+@media (max-width: 768px) {
+  .search-container {
+    display: none;
+  }
+  .botoes-header {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+    gap: 0.5rem;
+    transition: 0.4s ease-in-out;
+  }
+
+  .menu-mobile span:first-child{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .menu-mobile span:nth-child(2){
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+
+  }
+
+  .menu-mobile span:nth-child(3){
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .menu-mobile.ativo span:first-child{
+    transform: rotate(45deg) translate(9px, 5px);
+    background-color: var(--cor-laranja);
+  }
+
+  .menu-mobile.ativo span:nth-child(2){
+    opacity: 0;
+
+  }
+
+  .menu-mobile.ativo span:nth-child(3){
+    transform: rotate(-45deg) translate(10px, -7px);
+    background-color: var(--cor-laranja);
+  }
+
 }
