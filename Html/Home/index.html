@@ -17,13 +17,9 @@
 <body>
 
    <header>
-        <nav>
+        <nav class="menu">
             <img src="../../Assets/logo.png" alt="Logo Becanny" />
-            <div class="menu-mobile " id="menu-mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburguer"></button>
             <div class="search-container">
                 <input type="text" placeholder="Pesquisar..." id="search-input"/>
                 <button class="btn-search"><i class='bx  bx-search' ></i></button>  
@@ -35,28 +31,23 @@
 
         </nav>
    </header>
-    
-    <main>
-        <section class="banner">
-            <div class="banner-content">
-              <nav class="menu-categorias">
-                 <ul>
-                     <li><a href="#">Cachorro</a></li>
-                     <li><a href="#">Gato</a></li>
-                     <li><a href="#">Coelhos</a></li>
-                     <li><a href="#">Diversos</a></li>
-                     <li><a href="#">Peixes</a></li>
-                     <li><a href="#">Répteis</a></li>
-                 </ul>
-             </nav>
-             
-                <h1>Bem-vindo ao Becanny</h1>
-                <p>Descubra uma nova forma de comprar online</p>
-                <a href="#" class="btn-banner">Comece agora</a>
-                <img src="" alt="">
-            </div>
-        </section>
 
+    
+    <nav class="categories">
+        <ul>
+            <li>
+                <a href="#">Cachorros</a>
+                <a href="#">Gatos</a>
+                <a href="#">Peixes</a>
+                <a href="#">Pássaros</a>
+                <a href="#">Diversos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sale">
+        <p class="sale-content" id="sale-message">Entregamos na sua casa apartir das 19:00</p>
+    </div>
 
 
 

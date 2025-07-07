@@ -1,12 +1,10 @@
 :root {
-  --cor-azul: #3B82F6;
+  --cor-azul: rgb(0,183, 255);
   --cor-laranja: #F56B00;
   --cinza-claro: #F4F4F5;
   --cinza-escuro: #1F2937;
   --cinza-texto: #6B7280;
 }
-
-
 
 
 *{
@@ -16,6 +14,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+body{
+  background-color: var(--cinza-claro);
+  color: var(--cinza-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
 
 header{
@@ -25,15 +30,9 @@ header{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-body {
-  background-color: #f2f2f2; /* cinza claro */
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
 
 
-nav{
+.menu{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,14 +42,25 @@ nav{
 }
 
 nav img {
-  width: 9rem;
+  width: 7rem;
 }
 
-.menu-mobile {
-  flex-direction: column;
-  color: white;
-  cursor: pointer;
+.hamburguer{
   display: none;
+  border: none;
+  background:none;
+  border-top: 3px solid white;
+  cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto;
 }
 
 #search-input {
@@ -126,89 +136,109 @@ nav img {
   gap: 1rem; /* diminua esse valor para aproximar mais */
 }
 
+/* Fim do header */
+
+
+
+/* Inicio do Nav */
+
+.categories{
+  padding: 0.6rem 1.2rem;
+  background-color: #fff;
+  width: 100%;
+}
+
+.categories ul li{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.categories ul li a{
+  text-decoration: none;
+  color: var(--cinza-texto);
+  font-weight: 500;
+}
+
+.categories ul li a:hover{
+  color: var(--cor-laranja);
+  border-bottom: 1px solid var(--cor-laranja);
+}
+
+
+
+/* Fim do Nav */
+
+
+/* inicio do banner sale */
+
+.sale{
+  background-color: var(--cor-laranja);
+  color: white;
+  margin:2rem auto;
+  width: 60%;
+  padding: 0.6rem 1.2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+/* Fim do banner sale */
+
+
 
 
 @media (max-width: 768px) {
+
   .search-container {
     display: none;
   }
-  .botoes-header {
+
+   .botoes-header{
     display: none;
-  }
+   }
 
-  .menu-mobile {
+   /* Mobile Menu */
+
+  .botoes-header.ativo {
     display: flex;
-    gap: 0.5rem;
-    transition: 0.4s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    background-color: var(--cor-azul);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    transition: 1s ease-in-out;
   }
 
-  .menu-mobile span:first-child{
+  .hamburguer {
     display: block;
-    width: 30px;
-    height: 3px;
-    background-color: white;
+    z-index: 1000;
+    position: relative;
   }
 
-  .menu-mobile span:nth-child(2){
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: white;
-
+  .hamburguer.ativo{
+    border-top-color:transparent;
   }
 
-  .menu-mobile span:nth-child(3){
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: white;
+  .hamburguer.ativo::before {
+    transform: rotate(135deg);
+    transition: 0.5s ease-in-out;
+    
   }
 
-  .menu-mobile.ativo span:first-child{
-    transform: rotate(45deg) translate(9px, 5px);
-    background-color: var(--cor-laranja);
+  .hamburguer.ativo::after {
+    transform: rotate(-135deg);
+    margin-top: -8px;
+    transition: 0.5s ease-in-out;
   }
 
-  .menu-mobile.ativo span:nth-child(2){
-    opacity: 0;
+  /* Mobile Menu */
 
-  }
 
-  .menu-mobile.ativo span:nth-child(3){
-    transform: rotate(-45deg) translate(10px, -7px);
-    background-color: var(--cor-laranja);
-  }
 
 }
 
-.menu-categorias {
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
-}
-
-.menu-categorias ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-categorias li {
-  margin: 0 45px;
-}
-
-.menu-categorias a {
-  text-decoration: none;
-  color: #555;
-  font-size: 15px;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.menu-categorias a:hover {
-  color:rgb(249, 157, 46)
-}
