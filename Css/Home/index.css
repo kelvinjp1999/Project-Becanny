@@ -180,3 +180,35 @@ nav img {
   }
 
 }
+
+.menu-categorias {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.menu-categorias ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-categorias li {
+  margin: 0 45px;
+}
+
+.menu-categorias a {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu-categorias a:hover {
+  color:rgb(249, 157, 46)
+}
