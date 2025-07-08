@@ -2,11 +2,17 @@ const hamburguer = document.querySelector('.hamburguer');
 const nav = document.querySelector('.botoes-header');
 const saleMessage = document.querySelector('#sale-message')
 const sale = document.querySelector('.sale')
+const slides = document.querySelectorAll('.slide')
+const anteriorBtn=document.getElementById('anterior')
+const proximoBtn = document.getElementById('proximo')
+let slideAtual = 0
 
 hamburguer.addEventListener('click', () => {
     nav.classList.toggle('ativo');
     hamburguer.classList.toggle('ativo');
 });
+
+//Função pra mudar a frase de novidades
 
 function ChangeOffer(){
     let i=0
@@ -25,5 +31,22 @@ function ChangeOffer(){
         }
     },4000)
 }
+
+//Função do Carrossel
+
+function ChangeSlide(index){
+    slides.forEach(slide => slide.classList.remove('ativo'))
+    slides[index].classList.add('ativo')
+}
+
+anteriorBtn.addEventListener('click',() =>{
+    slideAtual = (slideAtual -1 + slides.length) % slides.length;
+    ChangeSlide(slideAtual)
+})
+
+proximoBtn.addEventListener('click', () => {
+  slideAtual = (slideAtual + 1) % slides.length;
+  ChangeSlide(slideAtual);
+});
 
 ChangeOffer()
