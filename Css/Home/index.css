@@ -1,3 +1,5 @@
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
 :root {
   --cor-azul: rgb(0,183, 255);
   --cor-laranja: #F56B00;
@@ -5,6 +7,16 @@
   --cinza-escuro: #1F2937;
   --cinza-texto: #6B7280;
 }
+
+
+/* Cores personalizadas */
+.green .icon { background-color: #74b43f; }
+.orange .icon { background-color: #f7941d; }
+.coral .icon { background-color: #f97f4f; }
+.blue .icon  { background-color: #00b2d6; }
+.gold .icon  { background-color: #ff7d00; }
+
+
 
 
 *{
@@ -90,31 +102,40 @@ nav img {
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-  border: 2px solid orange;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   color: white;
   background-color: transparent;
 }
 
-.profile-link i,
-.cart-link i {
-  font-size: 1.5rem;
-  color: orange;
-  transition: color 0.3s ease;
+.profile-link i{
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  color: white;
+  transition: 0.3s ease-in-out;
 }
 
-.profile-link:hover,
-.cart-link:hover {
-  background-color: orange;
+#cart-link{
+  font-size: 1.2rem;
+  transition: 0.3s;
+  padding: 0.4rem;
+  border: none;
+}
+
+#cart-link i{
+  color: white;
+  transition: 0.3s;
+}
+
+#cart-link:hover{
+  background-color: rgba(11, 102, 207, 0.3);
   color: white;
 }
 
-.profile-link:hover i,
-.cart-link:hover i {
+.profile-link:hover{
+  background-color: rgba(11, 102, 207, 0.3);
   color: white;
 }
-
-  
+ 
  
 .cart-link {
   display: flex;
@@ -131,7 +152,7 @@ nav img {
 
 .cart-link i {
   font-size: 30px;
-   color: orange;
+  color: orange;
 }
 
 .cart-link:hover {
@@ -187,7 +208,7 @@ nav img {
 .sale{
   background-color: var(--cor-laranja);
   color: white;
-  margin:2rem auto;
+  margin:4rem auto;
   width: 60%;
   padding: 0.6rem 1.2rem;
   border-radius: 15px;
@@ -202,10 +223,10 @@ nav img {
 
 .carrossel{
   position: relative;
-  width: 60%;
+  width: 75%;
   height: 400px;
   overflow: hidden;
-  margin: 5rem auto;
+  margin: 4rem auto;
   border-radius: 15px;
 }
 
@@ -236,10 +257,11 @@ nav img {
   opacity: 0.8;
   color: white;
   border: none;
-  padding: 15px;
+  padding: 1.2rem;
   cursor: pointer;
   z-index: 1;
-  border-radius: 40%;
+  border-radius: 30%;
+  font-size: 1.4rem;
 }
 
 #anterior {
@@ -265,67 +287,6 @@ nav img {
 
 /* Fim do carrossel */
 
-
-
-
-@media (max-width: 768px) {
-
-  .search-container {
-    display: none;
-  }
-
-   .botoes-header{
-    display: none;
-   }
-
-   /* Mobile Menu */
-
-  .botoes-header.ativo {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50vw;
-    background-color: #ffffffec; 
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 0;
-    transition: 1s ease-in-out;
-    z-index: 999;
-  }
-
-  .hamburguer {
-    display: block;
-    z-index: 1000;
-    position: relative;
-  }
-
-  .hamburguer.ativo{
-    border-top-color:transparent;
-    
-  }
-
-  .hamburguer.ativo::before {
-    transform: rotate(135deg);
-    transition: 0.5s ease-in-out;
-    
-  }
-
-  .hamburguer.ativo::after {
-    transform: rotate(-135deg);
-    margin-top: -8px;
-    transition: 0.5s ease-in-out;
-  }
-
-  /* Mobile Menu */
-
-
-
-}
-
-@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 
 .benefits-bar {
   display: flex;
@@ -375,14 +336,6 @@ nav img {
   font-size: 22px;
   flex-shrink: 0;
 }
-
-/* Cores personalizadas */
-.green .icon { background-color: #74b43f; }
-.orange .icon { background-color: #f7941d; }
-.coral .icon { background-color: #f97f4f; }
-.blue .icon  { background-color: #00b2d6; }
-.gold .icon  { background-color: #ff7d00; }
-
 
 /*Rsposividade para tablet*/
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -444,4 +397,61 @@ nav img {
     width: 45%;
     margin-bottom: 20px;
   }
+}
+
+@media (max-width: 768px) {
+
+  .search-container {
+    display: none;
+  }
+
+   .botoes-header{
+    display: none;
+   }
+
+   /* Mobile Menu */
+
+  .botoes-header.ativo {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    transition: 1s ease-in-out;
+    z-index: 999;
+  }
+
+  .hamburguer {
+    display: block;
+    z-index: 1000;
+    position: relative;
+  }
+
+  .hamburguer.ativo{
+    border-top-color:transparent;
+    
+  }
+
+  .hamburguer.ativo::before {
+    transform: rotate(135deg);
+    transition: 0.5s ease-in-out;
+    
+  }
+
+  .hamburguer.ativo::after {
+    transform: rotate(-135deg);
+    margin-top: -8px;
+    transition: 0.5s ease-in-out;
+  }
+
+  /* Mobile Menu */
+
+
+
 }
