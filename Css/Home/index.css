@@ -337,6 +337,34 @@ nav img {
   flex-shrink: 0;
 }
 
+/*Produtos*/
+.products{
+  max-width: 75%;
+  margin: 4rem auto;
+  position: relative;
+}
+
+.products h4{
+  position: absolute;
+  right: -10px;
+  top: -2rem;
+}
+
+.dog-products{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  margin-top: 4rem;
+}
+
+.dog-products div{
+  border: 2px solid black;
+  padding: 1.2rem;
+}
+
+
 /*Rsposividade para tablet*/
 @media (max-width: 1024px) and (min-width: 769px) {
 

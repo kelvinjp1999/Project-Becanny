@@ -1,3 +1,5 @@
+import { dogItens,catItens,variablesItens } from "./produtos.js";
+
 const hamburguer = document.querySelector('.hamburguer');
 const nav = document.querySelector('.botoes-header');
 const saleMessage = document.querySelector('#sale-message')
@@ -48,5 +50,7 @@ proximoBtn.addEventListener('click', () => {
   slideAtual = (slideAtual + 1) % slides.length;
   ChangeSlide(slideAtual);
 });
+
+console.log(dogItens)
 
 ChangeOffer()

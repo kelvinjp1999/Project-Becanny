@@ -1,4 +1,4 @@
-const dogItens=[
+export const dogItens=[
     {
         id:1,
         name:'Pedigree adulto carne e vegetais',
@@ -38,7 +38,7 @@ const dogItens=[
         img:'https://a-static.mlcdn.com.br/800x560/biscoito-para-cachorro-pedigree-marrobone-adulto-carne-500g/petmaniaaquarismoeatacado/76b8c530008b11eeb7844201ac185049/12d05804ca5974bda0b89865671fc1fa.jpeg'}           
 ]
 
-const catItens=[
+export const catItens=[
     {id:7,
         name:'Whiskas CArne adulto', 
         size:'10Kg',
@@ -81,7 +81,7 @@ const catItens=[
 ]       
     
 
-const variablesItens=[
+export const variablesItens=[
     {id:13,
         name:'Dreamies carne',
         size:'60g',
@@ -135,17 +135,3 @@ const variablesItens=[
     price:'25,50',
     img:'https://tfdfn2.vtexassets.com/arquivos/ids/233856-1200-1200?v=638246139500970000&width=1200&height=1200&aspect=true'},  
 ]
-
-
-//Funcao do menu mobile
-const btnMenu = document.getElementById('btn-menu')
-
-function showMenu(){
-    const nav=document.querySelector('.nav')
-
-    nav.classList.toggle('open')
-}
-
-btnMenu.addEventListener('click',showMenu)
-
-// Fim da Funcao do menu mobile
