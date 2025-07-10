@@ -51,6 +51,10 @@ proximoBtn.addEventListener('click', () => {
   ChangeSlide(slideAtual);
 });
 
-console.log(dogItens)
+
+for(let i=0;i < dogItens.length;i++){
+    console.log(`${i+1}- Nome:${dogItens[i].name} de ${dogItens[i].size} no valor de R$:${dogItens[i].price}`)
+}
+
 
 ChangeOffer()
