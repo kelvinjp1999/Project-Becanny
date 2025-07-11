@@ -8,13 +8,13 @@ export const dogItens=[
     },
     {
         id:2,
-        name:'Pedigree adulto raÃ§as pequenas',
+        name:'Pedigree adulto Raças pequenas',
         size:'15Kg',
         price:'169,90',
         img:'https://a-static.mlcdn.com.br/1500x1500/racao-pedigree-para-caes-adultos-de-racas-pequenas-15-kg/mundoanimalsaovicente/23eae35c70c611ecbfed4201ac18503a/02679ac165fd05fed3ad19c21cac6419.jpeg'
     },
     {id:3,
-        name:'Biscrock Racas pequenas ',
+        name:'Biscrock Raças pequenas ',
         size:'1Kg',
         price:'30,00',
         img:'https://a-static.mlcdn.com.br/800x560/petisco-biscrok-adulto-racas-pequenas-1-kg-pedigree/olistplus/opmrwr6jl8tb9700/dcbd204cbf8f4471cce22689dcbc6a87.jpeg'},
@@ -23,7 +23,7 @@ export const dogItens=[
       name:'Biscrock Junior',
       size:'15Kg',
       price:'169,90',
-      img:'https://a-static.mlcdn.com.br/800x560/pedigree-biscrok-junior-230-g/olistsp/osp1zbhnjyvazw3p/          e5e585eeccfebf29affbbd63455a9928.jpeg'},
+      img:'https://a-static.mlcdn.com.br/800x560/pedigree-biscrok-junior-230-g/olistsp/osp1zbhnjyvazw3p/e5e585eeccfebf29affbbd63455a9928.jpeg'},
 
     {id:5,
         name:'Biscrock Racas pequenas ',

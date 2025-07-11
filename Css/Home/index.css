@@ -419,9 +419,50 @@ nav img {
 }
 
 .icone-titulo {
-  width: 28px;
-  height: 28px;
+  width: 5rem;
+  height: 5rem;
 }
+
+/* Parte do Gato */
+
+.cat-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.cat-products div {
+  border: 2px solid black;
+  padding: 1.2rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+  background-color: white;
+  max-width: 100%;
+  text-align: center;
+}
+
+.cat-products div:hover {
+  transform: translateY(-4px);
+  background-color: #f5faff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cat-products button {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cat-products button:hover {
+  cursor: pointer;
+  background-color: #005fa3;
+}
+
 
 /*Rsposividade para tablet*/
 @media (max-width: 1024px) and (min-width: 769px) {

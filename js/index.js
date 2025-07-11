@@ -52,9 +52,59 @@ proximoBtn.addEventListener('click', () => {
 });
 
 
-for(let i=0;i < dogItens.length;i++){
-    console.log(`${i+1}- Nome:${dogItens[i].name} de ${dogItens[i].size} no valor de R$:${dogItens[i].price}`)
+//Função Listar produtos
+
+const ShowDogProducts = () => {
+    const productsDog = document.querySelector('#dog-products')
+
+
+    dogItens.forEach((product) =>{
+
+        if(product.id <= 4){
+            const productDiv = document.createElement('div')
+            productDiv.id=product.id
+
+            productDiv.innerHTML = `
+                <img src=${product.img} alt="" width="150px" height="150px">
+                <p><span class="Ração">${product.name} ${product.size}</span></p>
+                <p><span class="preco">R$ ${product.price}</span></p>
+                <button>Comprar</button>
+            `
+
+            productsDog.appendChild(productDiv)
+        }
+        
+    })
 }
 
+const ShowCatProducts = () => {
+    const productsCat = document.querySelector('#cat-products')
+    
 
+    catItens.forEach((product) =>{
+
+        if(product.id <= 10) {
+            const productDiv = document.createElement('div')
+            productDiv.id=product.id
+
+
+            productDiv.innerHTML = `
+                <img src=${product.img} alt="Cat-product" width="150px" height="150px">
+                <p><span class="Ração">${product.name} ${product.size}</span></p>
+                <p><span class="preco">R$ ${product.price}</span></p>
+                <button>Comprar</button>
+            `
+
+            productsCat.appendChild(productDiv)
+            
+        }
+        
+    })
+}
+
+// Fim da Função Listar produtos
+
+
+ShowDogProducts()
+ShowCatProducts()
 ChangeOffer()
