@@ -167,7 +167,7 @@ nav img {
 .botoes-header {
   display: flex;
   align-items: center;
-  gap: 1rem; /* diminua esse valor para aproximar mais */
+  gap: 1rem; 
 }
 
 /* Fim do header */
@@ -515,8 +515,78 @@ nav img {
 }
 /*fim do produtos*/
 
+/*começo da especificaçoes das raças*/
+.dicas-pet {
+  padding: 3rem 1rem;
+  background-color: #f6f1edc2;
+  text-align: center;
+}
+
+.titulo-dicas {
+  font-size: 2rem;
+  font-weight: bold;
+  color:#333;
+  margin-bottom: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.cards-dicas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card-dica {
+  background: #fff;
+  border-radius: 12px;
+  width: 260px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card-dica:hover {
+  transform: scale(1.03);
+}
+
+.card-dica img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.conteudo-card {
+  padding: 1rem;
+  text-align: left;
+}
+
+.conteudo-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.conteudo-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.conteudo-card a {
+  color: #fe890c;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.conteudo-card a:hover {
+  text-decoration: underline;
+}
+/* Fim da especificaçoes das raças */
+
 /*Rsposividade para tablet*/
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1010px) and (min-width: 769px) {
 
   /* HEADER - reduz espaçamento e fontes */
   .menu {
