@@ -102,9 +102,31 @@ const ShowCatProducts = () => {
     })
 }
 
+const showVariablesItems = () => {
+    const variables = document.querySelector('#variables-products')
+
+    variablesItens.forEach((product) =>{
+
+        if(product.id <= 16){
+            const productDiv = document.createElement('div')
+            productDiv.id=product.id
+
+            productDiv.innerHTML = `
+                <img src=${product.img} alt="" width="150px" height="150px">
+                <p><span class="Ração">${product.name} ${product.size}</span></p>
+                <p><span class="preco">R$ ${product.price}</span></p>
+                <button>Comprar</button>
+            `
+
+            variables.appendChild(productDiv)
+        }
+        
+    })
+}
+
 // Fim da Função Listar produtos
 
-
+showVariablesItems()
 ShowDogProducts()
 ShowCatProducts()
 ChangeOffer()
