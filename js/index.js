@@ -7,12 +7,28 @@ const sale = document.querySelector('.sale')
 const slides = document.querySelectorAll('.slide')
 const anteriorBtn=document.getElementById('anterior')
 const proximoBtn = document.getElementById('proximo')
+const btnSearch = document.querySelector('#btn-search');
 let slideAtual = 0
 
 hamburguer.addEventListener('click', () => {
     nav.classList.toggle('ativo');
     hamburguer.classList.toggle('ativo');
 });
+
+btnSearch.addEventListener('click', () => {
+    const searchTerm = document.querySelector('#search-input').value.toLowerCase();
+
+    const filteredProducts = [...dogItens,...catItens,...variablesItens].filter((product)=>{
+        return product.name.toLowerCase().includes(searchTerm) || product.size.toLowerCase().includes(searchTerm);
+    })
+
+    if(filteredProducts.length > 0){
+        const params = new URLSearchParams();
+        params.append('racoes',JSON.stringify(filteredProducts));
+        window.location.href = `../Resultado/Resultado.html?${params.toString()}`;
+    }
+});
+
 
 //Função pra mudar a frase de novidades
 

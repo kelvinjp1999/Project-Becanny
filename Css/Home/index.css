@@ -687,23 +687,32 @@ nav img {
 /*começo do footer*/
   .footer {
   background-color: #02c8ff;
-  color: #333;
+  color: var(--cinza-claro);
   padding: 1.2rem 1rem 0.5rem;
   font-family: 'Arial', sans-serif;
   margin-top: 4rem;
+  position: relative;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
 }
 
+.footer-logo {
+  width: 25%;
+}
+
 .footer-logo img {
   width: 187px;
+}
+
+.footer-description {
+  max-width: 1200px;
 }
 
 .footer-logo p {
@@ -712,31 +721,27 @@ nav img {
   margin-top: 0.5rem;
 }
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
 
-.footer-links a {
-  text-decoration: none;
-  color: #333;
-  transition: 0.3s;
-}
-
-.footer-links a:hover {
-  color: #ff6600;
-}
 
 .footer-social a {
   font-size: 1.8rem;
   margin-right: 1rem;
   color: #333;
   transition: 0.3s;
+
+}
+
+.footer-social{
+  position: absolute;
+  right: 3rem;
+  top: 5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
 
 .footer-social a:hover {
-  color: #ff6600;
+  color: var(--cinza-claro);;
 }
 
 .footer-bottom {
@@ -748,7 +753,7 @@ nav img {
 }
 
 .footer-imagen img {
-  max-width: 250px; /* você pode ajustar esse valor conforme o tamanho desejado */
+  max-width: 250px;
   height: auto;
   display: block;
   margin: 0 auto;
