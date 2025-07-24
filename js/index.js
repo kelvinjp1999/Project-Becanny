@@ -15,6 +15,7 @@ hamburguer.addEventListener('click', () => {
     hamburguer.classList.toggle('ativo');
 });
 
+// Função para a busca de produtos
 btnSearch.addEventListener('click', () => {
     const searchTerm = document.querySelector('#search-input').value.toLowerCase();
 
