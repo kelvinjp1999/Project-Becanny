@@ -588,7 +588,7 @@ nav img {
   background: #fff;
   border-radius: 12px;
   width: 260px;
-  height: 340px; /* ← força todos os cards a ficarem do mesmo tamanho */
+  height: 450px; /* ← força todos os cards a ficarem do mesmo tamanho */
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
@@ -598,7 +598,7 @@ nav img {
 
 .card-dica img {
   width: 100%;
-  height: 140px; /* ← garante altura fixa */
+  height: 190px; /* ← garante altura fixa */
   object-fit: cover;
   display: block;
 }
