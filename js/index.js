@@ -27,6 +27,8 @@ btnSearch.addEventListener('click', () => {
         const params = new URLSearchParams();
         params.append('racoes',JSON.stringify(filteredProducts));
         window.location.href = `../Resultado/Resultado.html?${params.toString()}`;
+    } else {
+        alert('Nenhum produto encontrado com esse termo de busca.');
     }
 });
 
