@@ -3,6 +3,12 @@ const nav = document.querySelector('.botoes-header');
 const params = new URLSearchParams(window.location.search);
 const racoesString = params.get('racoes');
 
+hamburguer.addEventListener('click', () => {
+    nav.classList.toggle('ativo');
+    hamburguer.classList.toggle('ativo');
+});
+
+
 if (racoesString) {
     try {
         const racoes = JSON.parse(racoesString);
@@ -11,10 +17,11 @@ if (racoesString) {
         if (racoes.length > 0) {
           racoes.forEach(produto => {
             const div = document.createElement('div');
+            div.classList.add('product-card');
             div.innerHTML = `
-              <img src="${produto.img}" alt="${produto.name}" width="150px" height="150px">
-              <p>${produto.name} ${produto.size}</p>
-              <p>Preço: R$ ${produto.price}</p>
+              <img src="${produto.img}" alt="${produto.name}" class="product-card-img" width="150px" height="150px">
+              <p class="product-card-name">${produto.name} ${produto.size}</p>
+              <p class="product-card-price">Preço: R$ ${produto.price}</p>
             `;
             container.appendChild(div);
           });
@@ -22,7 +29,7 @@ if (racoesString) {
           container.innerText = 'Nenhum produto encontrado.';
         }
       } catch (err) {
-        console.error('Erro ao parsear JSON:', err);
+        console.error('Erro ao passar JSON:', err);
         document.getElementById('resultados').innerText = 'Erro ao carregar os resultados.';
       }
     } else {

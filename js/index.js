@@ -2,13 +2,17 @@ import { dogItens,catItens,variablesItens } from "./produtos.js";
 
 const hamburguer = document.querySelector('.hamburguer');
 const nav = document.querySelector('.botoes-header');
+
 const saleMessage = document.querySelector('#sale-message')
 const sale = document.querySelector('.sale')
+
 const slides = document.querySelectorAll('.slide')
 const anteriorBtn=document.getElementById('anterior')
 const proximoBtn = document.getElementById('proximo')
-const btnSearch = document.querySelector('#btn-search');
 let slideAtual = 0
+
+const btnSearch = document.querySelector('#btn-search');
+
 
 hamburguer.addEventListener('click', () => {
     nav.classList.toggle('ativo');
