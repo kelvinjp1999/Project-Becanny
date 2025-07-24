@@ -20,8 +20,10 @@ if (racoesString) {
             div.classList.add('product-card');
             div.innerHTML = `
               <img src="${produto.img}" alt="${produto.name}" class="product-card-img" width="150px" height="150px">
-              <p class="product-card-name">${produto.name} ${produto.size}</p>
-              <p class="product-card-price">Preço: R$ ${produto.price}</p>
+              <div class="product-card-content">
+                <p class="product-card-name">${produto.name} ${produto.size}</p>
+                <p class="product-card-price">Preço: R$ ${produto.price}</p>
+              </div>
             `;
             container.appendChild(div);
           });
