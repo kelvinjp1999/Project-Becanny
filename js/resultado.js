@@ -18,6 +18,7 @@ if (racoesString) {
           racoes.forEach(produto => {
             const div = document.createElement('div');
             div.classList.add('product-card');
+            
             div.innerHTML = `
               <img src="${produto.img}" alt="${produto.name}" class="product-card-img" width="150px" height="150px">
               <div class="product-card-content">
