@@ -172,7 +172,14 @@ nav img {
 
 /* Fim do header */
 
+
+
 /* Inicio dos produtos */
+.product-card{
+  margin: 2rem auto;
+  border: 2px solid black;
+  width: 60%;
+}
 
 /* Fim dos produtos */
 
