@@ -741,7 +741,7 @@ nav img {
 }
 
 .footer-social a:hover {
-  color: var(--cinza-claro);;
+  color: var(--cinza-claro);
 }
 
 .footer-bottom {
@@ -765,6 +765,11 @@ nav img {
   order: 1;
   margin-top: 10px;
 }
+
+
+
+
+
 
 /* Responsivo */
 @media (max-width: 768px) {

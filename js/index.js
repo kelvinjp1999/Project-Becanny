@@ -86,6 +86,7 @@ const ShowDogProducts = () => {
         if(product.id <= 4){
             const productDiv = document.createElement('div')
             productDiv.id=product.id
+            productDiv.classList.add("produto-card") // <-- Adiciona classe para centralizar
 
             productDiv.innerHTML = `
                 <img src=${product.img} alt="" width="150px" height="150px">
@@ -109,6 +110,7 @@ const ShowCatProducts = () => {
         if(product.id <= 10) {
             const productDiv = document.createElement('div')
             productDiv.id=product.id
+            productDiv.classList.add("produto-card") // <-- Adiciona classe para centralizar
 
 
             productDiv.innerHTML = `
@@ -133,6 +135,7 @@ const showVariablesItems = () => {
         if(product.id <= 16){
             const productDiv = document.createElement('div')
             productDiv.id=product.id
+            productDiv.classList.add("produto-card") // <-- Adiciona classe para centralizar
 
             productDiv.innerHTML = `
                 <img src=${product.img} alt="" width="150px" height="150px">
