@@ -12,6 +12,7 @@ const proximoBtn = document.getElementById('proximo')
 let slideAtual = 0
 
 const btnSearch = document.querySelector('#btn-search');
+const cart = []
 
 
 hamburguer.addEventListener('click', () => {
@@ -74,6 +75,24 @@ proximoBtn.addEventListener('click', () => {
   ChangeSlide(slideAtual);
 });
 
+// Função para adicionar ao carrinho
+
+function addToCar(e){
+    alert('Clicou aqui')
+    const productIndex = e.target.parentNode.id
+    const productToAdd =  [...dogItens,...catItens,...variablesItens].filter((item) => item.id == productIndex)
+
+
+    if(productIndex === dogItens.find((item) => item.id) || catItens.find((item) => item.id) || variablesItens.find((item) => item.id)){
+        cart.push(productToAdd)
+        cart.forEach((item) =>{
+            console.log(item.forEach((item) => console.log(item.name)))
+        })
+        localStorage.setItem("carrinho",cart)
+    }else {
+       console.log("Nao encontrou o produto") 
+    }
+}
 
 //Função Listar produtos
 
@@ -92,9 +111,13 @@ const ShowDogProducts = () => {
                 <img src=${product.img} alt="" width="150px" height="150px">
                 <p><span class="Ração">${product.name} ${product.size}</span></p>
                 <p><span class="preco">R$ ${product.price}</span></p>
-                <button>Comprar</button>
             `
 
+            const btn = document.createElement('button')
+            btn.textContent="Comprar"
+            btn.addEventListener('click',addToCar)
+
+            productDiv.appendChild(btn)
             productsDog.appendChild(productDiv)
         }
         
@@ -117,9 +140,13 @@ const ShowCatProducts = () => {
                 <img src=${product.img} alt="Cat-product" width="150px" height="150px">
                 <p><span class="Ração">${product.name} ${product.size}</span></p>
                 <p><span class="preco">R$ ${product.price}</span></p>
-                <button>Comprar</button>
+                
             `
+            const btn = document.createElement('button')
+            btn.textContent="Comprar"
+            btn.addEventListener('click',addToCar)
 
+            productDiv.appendChild(btn)
             productsCat.appendChild(productDiv)
             
         }
@@ -141,9 +168,12 @@ const showVariablesItems = () => {
                 <img src=${product.img} alt="" width="150px" height="150px">
                 <p><span class="Ração">${product.name} ${product.size}</span></p>
                 <p><span class="preco">R$ ${product.price}</span></p>
-                <button>Comprar</button>
             `
+            const btn = document.createElement('button')
+            btn.textContent="Comprar"
+            btn.addEventListener('click',addToCar)
 
+            productDiv.appendChild(btn)
             variables.appendChild(productDiv)
         }
         
