@@ -78,7 +78,6 @@ proximoBtn.addEventListener('click', () => {
 // Função para adicionar ao carrinho
 
 function addToCar(e){
-    alert('Clicou aqui')
     const productIndex = e.target.parentNode.id
     const productToAdd =  [...dogItens,...catItens,...variablesItens].filter((item) => item.id == productIndex)
 
